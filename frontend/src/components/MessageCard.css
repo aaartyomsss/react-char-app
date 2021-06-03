@@ -1,0 +1,14 @@
+img {
+  height: 25px;
+  padding-left: 1rem;
+}
+
+.user-wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.card-wrapper {
+  border: 1px solid black;
+}
