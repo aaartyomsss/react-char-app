@@ -1,6 +1,7 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 import socketIOClient from "socket.io-client";
+import "./MainForm.css";
 
 const MainForm = ({ username }) => {
   const socket = socketIOClient("http://localhost:8000");
@@ -30,26 +31,24 @@ const MainForm = ({ username }) => {
   };
 
   return (
-    <div>
+    <div className="wrapper">
       <div>hi {username}</div>
-      <div>
+      <div className="form-wrapper">
         <p>Create new room</p>
         <form onSubmit={createRoom}>
           <label htmlFor="roomName">Room Name</label>
           <input type="text" name="roomName" />
-          <br />
           <input type="submit" value="Create room" />
         </form>
       </div>
-      <div>
+      <div className="form-wrapper">
         <p>or join an existing one</p>
+        <form onSubmit={joinRoom}>
+          <label htmlFor="room-id">Room ID</label>
+          <input type="text" name="roomId" />
+          <input type="submit" value="Join room" />
+        </form>
       </div>
-      <form onSubmit={joinRoom}>
-        <label htmlFor="room-id">Room ID</label>
-        <input type="text" name="roomId" />
-        <br />
-        <input type="submit" value="Join room" />
-      </form>
     </div>
   );
 };

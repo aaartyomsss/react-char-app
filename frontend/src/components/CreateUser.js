@@ -1,6 +1,7 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 import { setName } from "../service/userService";
+import "./CreateUser.css";
 
 const CreateUser = ({ setUsername }) => {
   const history = useHistory();
@@ -13,11 +14,11 @@ const CreateUser = ({ setUsername }) => {
   };
 
   return (
-    <div>
+    <div className="wrapper">
       <p>Enter username</p>
       <form onSubmit={submitUsername}>
-        <input type="text" name="username" />
-        <button type="submit">submit</button>
+        <input type="text" name="username" placeholder="Username" />
+        <button type="submit">SUBMIT</button>
       </form>
     </div>
   );

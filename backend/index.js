@@ -9,8 +9,6 @@ const io = require("socket.io")(http, {
 const PORT = process.env.PORT || 8000;
 
 io.on("connection", (socket) => {
-  console.log(`User with id ${socket.id} connected`);
-
   socket.on("join-room", (room) => {
     socket.join(room);
   });

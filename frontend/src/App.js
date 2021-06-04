@@ -23,7 +23,7 @@ const App = () => {
       <Router>
         <Switch>
           <Route path="/room">
-            <Room username={username} />
+            <Room currentUsername={username} />
           </Route>
 
           <Route path="/create-user">

@@ -6,9 +6,39 @@ img {
 .user-wrapper {
   display: flex;
   align-items: center;
-  border: 1px solid black;
+  padding: 0.4rem 0.6rem 0 0.6rem;
+  color: white;
 }
 
 .card-wrapper {
+  margin: 0 0 1rem 0;
+  width: 100%;
+  display: flex;
+}
+
+.card-border {
   border: 1px solid black;
+  width: 30%;
+  border-radius: 10px;
+  background-color: #579ffb;
+}
+
+.card-right {
+  text-align: right;
+  float: right;
+  background-color: blueviolet;
+}
+
+.different-user {
+  justify-content: flex-end;
+}
+
+.float-right {
+  text-align: right;
+  padding: 0 0.5rem 0 0;
+}
+
+.message-wrapper {
+  color: white;
+  padding: 0 0.6rem;
 }
